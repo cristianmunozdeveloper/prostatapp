@@ -34,6 +34,7 @@ class MenuActivity : AppCompatActivity() {
 
     private fun navigate(index: Int) {
         Toast.makeText(this, "$index", Toast.LENGTH_SHORT).show()
+        startActivity(navigation.goToProstatest(this))
     }
 
     private fun addMenuItems() {
