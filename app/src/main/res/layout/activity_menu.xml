@@ -16,7 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_app_name" />
+        app:srcCompat="@drawable/ic_app_name"
+        app:tint="#00f" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/menu_items_container"

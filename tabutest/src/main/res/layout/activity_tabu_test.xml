@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProstaTestActivity">
+    tools:context=".TabuTestActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_prostatest" />
+        app:srcCompat="@drawable/ic_tabutest" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/tabutest_questions_container"

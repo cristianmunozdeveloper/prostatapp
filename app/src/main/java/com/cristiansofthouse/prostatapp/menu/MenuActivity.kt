@@ -1,7 +1,7 @@
 package com.cristiansofthouse.prostatapp.menu
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.cristiansofthouse.navigation.Navigation
@@ -33,8 +33,12 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun navigate(index: Int) {
-        Toast.makeText(this, "$index", Toast.LENGTH_SHORT).show()
-        startActivity(navigation.goToProstatest(this))
+        val intent = when (index) {
+            0 -> navigation.goToProstatest(this)
+            1 -> navigation.goToTabuTest(this)
+            else -> Intent()
+        }
+        startActivity(intent)
     }
 
     private fun addMenuItems() {

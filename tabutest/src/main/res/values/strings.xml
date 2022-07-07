@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="tabu_test">
+        <item>¿Considera usted que el tacto rectal afecta la masculinidad?</item>
+        <item>¿Sabe en que consiste el proceso del tacto rectal?</item>
+        <item>¿Ha bromeado o criticado con otras personas sobre el tacto rectal?</item>
+        <item>¿Le da miedo o pena asistir al medico para revision de prostata?</item>
+        <item>¿Considera al cancer de prostata una sentencia de muerte?</item>
+    </string-array>
+</resources>
