@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671825185262",
+    "project_id": "prostatapp",
+    "storage_bucket": "prostatapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671825185262:android:ee0f319550acbf3fbce6ff",
+        "android_client_info": {
+          "package_name": "com.cristiansofthouse.prostatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671825185262-7qq86hu5866bn3fccp5p02s6rrj2smkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNBRALVKNxo1HpquoBKz0zztneMypyDK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671825185262-7qq86hu5866bn3fccp5p02s6rrj2smkf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
