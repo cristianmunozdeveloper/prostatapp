@@ -6,4 +6,5 @@ import android.content.Intent
 interface Navigation {
 
     fun goToProstatest(context: Context): Intent
+    fun goToTabuTest(context: Context): Intent
 }
