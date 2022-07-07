@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Prostatapp</string>
+    <string-array name="menu_items">
+        <item>Prostatest</item>
+        <item>Tabutest</item>
+        <item>Educacion</item>
+        <item>Recomendaciones</item>
+        <item>Perfil</item>
+        <item>Historial de test</item>
+    </string-array>
 </resources>
