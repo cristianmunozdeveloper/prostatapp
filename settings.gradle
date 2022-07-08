@@ -16,4 +16,5 @@ dependencyResolutionManagement {
 rootProject.name = "Prostatapp"
 include ':app'
 include ':navigation'
+include ':prostatest'
 include ':tabutest'
