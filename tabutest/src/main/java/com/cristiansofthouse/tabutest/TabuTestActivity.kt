@@ -24,6 +24,7 @@ class TabuTestActivity : AppCompatActivity() {
         setupRecycler()
         setupQuestions()
         binding.btnSave.setOnClickListener { save() }
+        binding.imageviewBackButton.setOnClickListener { onBackPressed() }
     }
 
     private fun setupRecycler() {

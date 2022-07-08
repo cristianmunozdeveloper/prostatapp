@@ -4,17 +4,16 @@
         <item>2. Antecendetes CIA</item>
         <item>3. Afrocolombiano</item>
         <item>4. Estrato 0, 1 o 2</item>
-        <item>5. ¿Culminó el bachillerato?</item>
-        <item>6. ¿Vive en ciudad principal?</item>
-        <item>7. ¿Conduce vehiculo con Diesel?</item>
-        <item>8. ¿Tiene o ha tenido calculos renales?</item>
-        <item>9. ¿Infecciones ETS y/o bacterianas? (Gonorrea, sifilis, herpes, condilomas)</item>
-        <item>10. ¿Realiza actividad fisica 3 veces por semana?</item>
-        <item>11. ¿Tiene relaciones sexuales al menos 1 vez al mes?</item>
-        <item>12. ¿Presenta sintomas urinarios? (Dolor, chorro disminuido, interrumpido o para arriba)</item>
-        <item>13. ¿Ha tenido perdida de peso inexplicada?</item>
-        <item>14. ¿Ingiere comida chatarra al menos 2 veces por semana?</item>
-        <item>15. ¿Ha tenido dificultad para tener relaciones sexuales?</item>
-        <item>16. ¿Consume mas de 3 porciones de lacteos al día?</item>
+        <item>5. ¿Vive en ciudad principal?</item>
+        <item>6. ¿Conduce vehiculo con Diesel?</item>
+        <item>7. ¿Tiene o ha tenido calculos renales?</item>
+        <item>8. ¿Infecciones ETS y/o bacterianas? (Gonorrea, sifilis, herpes, condilomas)</item>
+        <item>9. ¿Realiza actividad fisica 3 veces por semana?</item>
+        <item>10. ¿Tiene relaciones sexuales al menos 1 vez al mes?</item>
+        <item>11. ¿Presenta sintomas urinarios? (Dolor, chorro disminuido, interrumpido o para arriba)</item>
+        <item>12. ¿Ha tenido perdida de peso inexplicada?</item>
+        <item>13. ¿Ingiere comida chatarra al menos 2 veces por semana?</item>
+        <item>14. ¿Ha tenido dificultad para tener relaciones sexuales?</item>
+        <item>15. ¿Consume mas de 3 porciones de lacteos al día?</item>
     </string-array>
 </resources>
