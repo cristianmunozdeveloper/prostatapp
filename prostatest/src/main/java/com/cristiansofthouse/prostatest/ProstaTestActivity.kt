@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.cristiansofthouse.common.QuestionItem
 import com.cristiansofthouse.prostatest.databinding.ActivityProstaTestBinding
-import com.cristiansofthouse.prostatest.question.QuestionItem
 import com.xwray.groupie.GroupieAdapter
 
 class ProstaTestActivity : AppCompatActivity() {
@@ -24,6 +24,7 @@ class ProstaTestActivity : AppCompatActivity() {
         setupRecycler()
         setupQuestions()
         binding.btnSave.setOnClickListener { save() }
+        binding.imageviewBackButton.setOnClickListener { onBackPressed() }
     }
 
     private fun setupRecycler() {
