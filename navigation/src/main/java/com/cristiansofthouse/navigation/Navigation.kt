@@ -7,4 +7,5 @@ interface Navigation {
 
     fun goToProstatest(context: Context): Intent
     fun goToTabuTest(context: Context): Intent
+    fun goToProfile(context: Context): Intent
 }

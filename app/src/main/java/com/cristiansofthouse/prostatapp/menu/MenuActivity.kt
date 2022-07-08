@@ -30,6 +30,11 @@ class MenuActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupRecycler()
         addMenuItems()
+        profileListener()
+    }
+
+    private fun profileListener() {
+        binding.imageviewProfile.setOnClickListener { startActivity(navigation.goToProfile(this)) }
     }
 
     private fun navigate(index: Int) {

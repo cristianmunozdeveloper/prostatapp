@@ -1,0 +1,11 @@
+<resources>
+    <string name="save">GUARDAR</string>
+    <string name="back_button">Back Button</string>
+    <string name="string_name">Nombre</string>
+    <string name="string_age">Edad</string>
+    <string name="string_weight">Peso - Kg</string>
+    <string name="string_size">Talla - cm</string>
+    <string name="string_imc">Calcular IMC</string>
+    <string name="imc_result">0</string>
+    <string name="imc">Su indice de masa corporal es:</string>
+</resources>
