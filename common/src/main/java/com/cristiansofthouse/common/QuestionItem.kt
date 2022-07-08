@@ -1,8 +1,7 @@
-package com.cristiansofthouse.tabutest.question
+package com.cristiansofthouse.common
 
 import android.view.View
-import com.cristiansofthouse.tabutest.R
-import com.cristiansofthouse.tabutest.databinding.ViewQuestionItemBinding
+import com.cristiansofthouse.common.databinding.ViewQuestionItemBinding
 import com.xwray.groupie.viewbinding.BindableItem
 
 class QuestionItem(

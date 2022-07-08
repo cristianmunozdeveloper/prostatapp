@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.cristiansofthouse.common.QuestionItem
 import com.cristiansofthouse.tabutest.databinding.ActivityTabuTestBinding
-import com.cristiansofthouse.tabutest.question.QuestionItem
 import com.xwray.groupie.GroupieAdapter
 
 class TabuTestActivity : AppCompatActivity() {

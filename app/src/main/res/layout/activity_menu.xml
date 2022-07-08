@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
     tools:context=".menu.MenuActivity">
 
     <ImageView
@@ -16,8 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_app_name"
-        app:tint="#00f" />
+        app:srcCompat="@drawable/ic_app_name" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/menu_items_container"
@@ -31,4 +31,23 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:itemCount="5"
         tools:listitem="@layout/view_menu_item" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/enfermeria" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/escudo_unicauca" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
