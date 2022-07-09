@@ -3,10 +3,14 @@ package com.cristiansofthouse.profile
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.cristiansofthouse.profile.databinding.ActivityProfileBinding
+import com.cristiansofthouse.profile.model.ProfileActions
 
 class ProfileActivity : AppCompatActivity() {
+
+    private val viewModel: ProfileViewModel by viewModels()
 
     private val binding: ActivityProfileBinding by lazy {
         ActivityProfileBinding.inflate(layoutInflater)
@@ -15,20 +19,39 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.tvImc.visibility = View.INVISIBLE
-        binding.tvImcResult.visibility = View.INVISIBLE
+        setTvVisibility(View.INVISIBLE)
         binding.btnSave.setOnClickListener { save() }
         binding.imageviewBackButton.setOnClickListener { onBackPressed() }
-        binding.btnImc.setOnClickListener { calculateImc() }
+        binding.btnImc.setOnClickListener {
+            viewModel.operationImc(
+                binding.editWeight.text.toString(),
+                binding.editSize.text.toString()
+            )
+        }
+        setObserver()
     }
 
-    private fun calculateImc() {
-        binding.tvImc.visibility = View.VISIBLE
-        binding.tvImcResult.visibility = View.VISIBLE
-        val weight = binding.editWeight.text.toString().toFloat()
-        val size = binding.editSize.text.toString().toFloat() / 100
-        val result = weight / (size * size)
-        binding.tvImcResult.text = result.toString()
+    private fun setObserver() {
+        viewModel.action.observe(this, ::handleActions)
+    }
+
+    private fun handleActions(profileActions: ProfileActions) = when (profileActions) {
+        is ProfileActions.ShowError -> Toast.makeText(
+            this,
+            profileActions.message,
+            Toast.LENGTH_SHORT
+        ).show()
+        is ProfileActions.ShowResult -> resultImc(profileActions.result)
+    }
+
+    private fun resultImc(result: String) {
+        setTvVisibility(View.VISIBLE)
+        binding.tvImcResult.text = result
+    }
+
+    private fun setTvVisibility(visibility: Int) {
+        binding.tvImc.visibility = visibility
+        binding.tvImcResult.visibility = visibility
     }
 
     private fun save() {
