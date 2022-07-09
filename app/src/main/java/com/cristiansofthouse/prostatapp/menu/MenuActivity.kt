@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.cristiansofthouse.navigation.Navigation
 import com.cristiansofthouse.prostatapp.R
 import com.cristiansofthouse.prostatapp.databinding.ActivityMenuBinding
+import com.cristiansofthouse.prostatapp.information.InformationActivity
+import com.cristiansofthouse.prostatapp.information.SELECTED_INDEX
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -36,9 +38,16 @@ class MenuActivity : AppCompatActivity() {
         val intent = when (index) {
             0 -> navigation.goToProstatest(this)
             1 -> navigation.goToTabuTest(this)
+            2, 3 -> goToInformation(index)
             else -> Intent()
         }
         startActivity(intent)
+    }
+
+    private fun goToInformation(index: Int): Intent {
+        return Intent(this, InformationActivity::class.java).apply {
+            putExtra(SELECTED_INDEX, index)
+        }
     }
 
     private fun addMenuItems() {
