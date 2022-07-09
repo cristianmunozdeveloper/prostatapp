@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Prostatapp"
         tools:targetApi="31">
         <activity
+            android:name=".information.InformationActivity"
+            android:exported="false" />
+        <activity
             android:name=".menu.MenuActivity"
             android:exported="true">
             <intent-filter>
