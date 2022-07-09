@@ -4,13 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.cristiansofthouse.profile.model.ProfileActions
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
+import javax.inject.Inject
 
-class ProfileViewModel : ViewModel() {
+@HiltViewModel
+class ProfileViewModel @Inject constructor(
+    private val controller: ProfileController
+) : ViewModel() {
 
-    private val controller: ProfileController = ProfileControllerImpl()
     private val disposable = CompositeDisposable()
 
     private val _action = MutableLiveData<ProfileActions>()

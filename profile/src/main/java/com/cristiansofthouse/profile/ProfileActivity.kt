@@ -7,7 +7,9 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.cristiansofthouse.profile.databinding.ActivityProfileBinding
 import com.cristiansofthouse.profile.model.ProfileActions
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ProfileActivity : AppCompatActivity() {
 
     private val viewModel: ProfileViewModel by viewModels()
