@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_main"
-    tools:context=".information.InformationActivity">
+    tools:context="InformationActivity">
     <ImageView
         android:id="@+id/imageview_back_button"
         android:layout_width="wrap_content"
@@ -39,12 +39,12 @@
         <TextView
             android:id="@+id/textview_information"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="start"
             android:scrollbars="vertical"
             android:textColor="@color/white"
-            android:textSize="20dp"
-            tools:text="Esto es severo texto bien utamente largo" />
+            android:textSize="@dimen/text_size"
+            tools:text="Esto es severo texto bien largo" />
     </ScrollView>
 
 </LinearLayout>

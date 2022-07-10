@@ -1,9 +1,8 @@
-package com.cristiansofthouse.prostatapp.information
+package com.cristiansofthouse.information
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.cristiansofthouse.prostatapp.R
-import com.cristiansofthouse.prostatapp.databinding.ActivityInformationBinding
+import com.cristiansofthouse.information.databinding.ActivityInformationBinding
 
 const val SELECTED_INDEX = "SELECTED_INDEX"
 

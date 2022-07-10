@@ -36,7 +36,7 @@
             android:gravity="center"
             android:text="@string/string_name"
             android:textColor="@color/white"
-            android:textSize="@dimen/profile_text_size" />
+            android:textSize="@dimen/text_size" />
 
         <EditText
             android:id="@+id/edit_name"
@@ -49,7 +49,7 @@
             android:inputType="textPersonName"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/profile_text_size"
+            android:textSize="@dimen/text_size"
             android:theme="@style/Theme.AppCompat" />
     </LinearLayout>
 
@@ -69,7 +69,7 @@
             android:gravity="center"
             android:text="@string/string_age"
             android:textColor="@color/white"
-            android:textSize="@dimen/profile_text_size" />
+            android:textSize="@dimen/text_size" />
 
         <EditText
             android:id="@+id/edit_age"
@@ -82,7 +82,7 @@
             android:inputType="number"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/profile_text_size"
+            android:textSize="@dimen/text_size"
             android:theme="@style/Theme.AppCompat" />
     </LinearLayout>
 
@@ -102,7 +102,7 @@
             android:gravity="center"
             android:text="@string/string_weight"
             android:textColor="@color/white"
-            android:textSize="@dimen/profile_text_size" />
+            android:textSize="@dimen/text_size" />
 
         <EditText
             android:id="@+id/edit_weight"
@@ -115,7 +115,7 @@
             android:inputType="number"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/profile_text_size"
+            android:textSize="@dimen/text_size"
             android:theme="@style/Theme.AppCompat" />
     </LinearLayout>
 
@@ -135,7 +135,7 @@
             android:gravity="center"
             android:text="@string/string_size"
             android:textColor="@color/white"
-            android:textSize="@dimen/profile_text_size" />
+            android:textSize="@dimen/text_size" />
 
         <EditText
             android:id="@+id/edit_size"
@@ -148,7 +148,7 @@
             android:inputType="number"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            android:textSize="@dimen/profile_text_size"
+            android:textSize="@dimen/text_size"
             android:theme="@style/Theme.AppCompat" />
     </LinearLayout>
 
@@ -171,7 +171,7 @@
             android:padding="@dimen/tv_padding"
             android:text="@string/string_imc"
             android:textColor="@color/white"
-            android:textSize="@dimen/profile_text_size" />
+            android:textSize="@dimen/text_size" />
 
         <TextView
             android:id="@+id/tv_imc"
@@ -182,7 +182,7 @@
             android:padding="@dimen/tv_padding"
             android:text="@string/imc"
             android:textColor="@color/white"
-            android:textSize="@dimen/profile_text_size" />
+            android:textSize="@dimen/text_size" />
 
         <TextView
             android:id="@+id/tv_imc_result"
@@ -192,7 +192,7 @@
             android:padding="@dimen/tv_padding"
             android:text="@string/imc_result"
             android:textColor="@color/white"
-            android:textSize="@dimen/profile_text_size" />
+            android:textSize="@dimen/text_size" />
     </LinearLayout>
 
     <TextView
