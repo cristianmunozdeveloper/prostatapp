@@ -21,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setTvVisibility(View.INVISIBLE)
+        setTextviewVisibility(View.INVISIBLE)
         binding.btnSave.setOnClickListener { save() }
         binding.imageviewBackButton.setOnClickListener { onBackPressed() }
         binding.btnImc.setOnClickListener {
@@ -47,11 +47,11 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun resultImc(result: String) {
-        setTvVisibility(View.VISIBLE)
+        setTextviewVisibility(View.VISIBLE)
         binding.tvImcResult.text = result
     }
 
-    private fun setTvVisibility(visibility: Int) {
+    private fun setTextviewVisibility(visibility: Int) {
         binding.tvImc.visibility = visibility
         binding.tvImcResult.visibility = visibility
     }

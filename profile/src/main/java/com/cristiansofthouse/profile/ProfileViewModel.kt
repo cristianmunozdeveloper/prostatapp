@@ -23,7 +23,7 @@ class ProfileViewModel @Inject constructor(
     fun operationImc(weight: String, size: String) {
         disposable.add(
             controller.resultIMC(weight, size)
-                .subscribeOn(Schedulers.io())
+                .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
                     _action.value = ProfileActions.ShowResult(it)
