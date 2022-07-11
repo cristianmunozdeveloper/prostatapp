@@ -4,11 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.cristiansofthouse.information.SELECTED_INDEX
 import com.cristiansofthouse.navigation.Navigation
 import com.cristiansofthouse.prostatapp.R
 import com.cristiansofthouse.prostatapp.databinding.ActivityMenuBinding
-import com.cristiansofthouse.prostatapp.information.InformationActivity
-import com.cristiansofthouse.prostatapp.information.SELECTED_INDEX
 import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -32,6 +31,11 @@ class MenuActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupRecycler()
         addMenuItems()
+        profileListener()
+    }
+
+    private fun profileListener() {
+        binding.imageviewProfile.setOnClickListener { startActivity(navigation.goToProfile(this)) }
     }
 
     private fun navigate(index: Int) {
@@ -45,7 +49,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     private fun goToInformation(index: Int): Intent {
-        return Intent(this, InformationActivity::class.java).apply {
+        return navigation.goToInformation(this).apply {
             putExtra(SELECTED_INDEX, index)
         }
     }
@@ -63,5 +67,4 @@ class MenuActivity : AppCompatActivity() {
                 GridLayoutManager(this@MenuActivity, groupAdapter.spanCount)
             adapter = groupAdapter
         }
-    }
-}
+    }}
