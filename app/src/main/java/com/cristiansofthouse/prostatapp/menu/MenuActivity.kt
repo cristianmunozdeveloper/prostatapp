@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.cristiansofthouse.common.ResultDialog
 import com.cristiansofthouse.information.SELECTED_INDEX
 import com.cristiansofthouse.navigation.Navigation
 import com.cristiansofthouse.prostatapp.R
@@ -43,9 +44,17 @@ class MenuActivity : AppCompatActivity() {
             0 -> navigation.goToProstatest(this)
             1 -> navigation.goToTabuTest(this)
             2, 3 -> goToInformation(index)
-            else -> Intent()
+            4 -> navigation.goToTestHistory(this)
+            else -> aboutUs()
         }
-        startActivity(intent)
+        if (intent is Intent) {
+            startActivity(intent)
+        }
+    }
+
+    private fun aboutUs() {
+        ResultDialog.newInstance(getString(R.string.about_us))
+            .show(supportFragmentManager, this.javaClass.name)
     }
 
     private fun goToInformation(index: Int): Intent {
@@ -67,4 +76,5 @@ class MenuActivity : AppCompatActivity() {
                 GridLayoutManager(this@MenuActivity, groupAdapter.spanCount)
             adapter = groupAdapter
         }
-    }}
+    }
+}

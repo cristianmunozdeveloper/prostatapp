@@ -1,9 +1,11 @@
 <resources>
     <string-array name="tabu_test">
         <item>1. ¿Considera usted que el tacto rectal afecta la masculinidad?</item>
-        <item>2. ¿Sabe en que consiste el proceso del tacto rectal?</item>
+        <item>2. ¿Desconoce el procedimiento del tacto rectal?</item>
         <item>3. ¿Ha bromeado o criticado con otras personas sobre el tacto rectal?</item>
         <item>4. ¿Le da miedo o pena asistir al medico para revision de prostata?</item>
-        <item>5. ¿Considera al cancer de prostata una sentencia de muerte?</item>
+        <item>5. ¿Considera al cáncer de próstata una sentencia de muerte?</item>
     </string-array>
+    <string name="tabu_message">Usted está desinformado sobre el tema de la revisión prostática, se sugiere acceder al servicio de salud para obtener información adecuada.</string>
+    <string name="no_tabu_message">Felicidades, cuenta con información adecuada sobre el tema de revisión prostática, recuerde visitar a su médico para llevar un control.</string>
 </resources>

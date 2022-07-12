@@ -1,10 +1,23 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Prostatapp</string>
     <string-array name="menu_items">
         <item>Prostatest</item>
         <item>Tabutest</item>
-        <item>Educacion</item>
-        <item>Asesoria</item>
+        <item>Educación</item>
+        <item>Asesoría</item>
         <item>Historial de test</item>
+        <item>Conocenos</item>
     </string-array>
+    <string name="about_us" tools:ignore="ExtraTranslation">
+        Estudiantes del programa de Enfermería de la universidad del cauca.\n\n
+- Laura Natalia Lara\n
+- Dahiana Carolina Hernández\n
+- Anderson Alexis Joaquí\n
+- Jorge Andrés Moncayo\n\n
+Asesora.\n
+- Yusley Katerine Pabon\n\n
+Desarrolladores.\n\n
+- Cristian David Muñoz\n(Ingeniero en electrónica Unicauca)\n
+- Juan Sebastian Benavides\n(Ingeniero en electrónica Unicauca)
+    </string>
 </resources>

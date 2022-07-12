@@ -9,5 +9,5 @@ interface Navigation {
     fun goToTabuTest(context: Context): Intent
     fun goToProfile(context: Context): Intent
     fun goToInformation(context: Context): Intent
-
+    fun goToTestHistory(context: Context): Intent
 }
