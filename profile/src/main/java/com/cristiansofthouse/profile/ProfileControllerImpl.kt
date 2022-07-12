@@ -13,7 +13,7 @@ class ProfileControllerImpl @Inject constructor() : ProfileController {
                     val weightKg = weight.toFloat()
                     val sizeMts = size.toFloat() / 100
                     val result = weightKg / (sizeMts * sizeMts)
-                    emitter.onSuccess(result.toString())
+                    emitter.onSuccess(String.format("%.1f", result))
                 } catch (e: Exception) {
                     emitter.onError(Throwable(NEED_NUMBERS))
                 }

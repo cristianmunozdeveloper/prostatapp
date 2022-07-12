@@ -20,192 +20,101 @@
         app:srcCompat="@drawable/ic_profile"
         tools:ignore="ContentDescription" />
 
-    <LinearLayout
-        android:id="@+id/linear_name"
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linear_age"
-        app:layout_constraintTop_toBottomOf="@+id/imageview_title"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_title">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:text="@string/string_name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_name"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
             android:hint="@string/string_name"
-            android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/text_size"
-            android:theme="@style/Theme.AppCompat" />
-    </LinearLayout>
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_age"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linear_weight"
-        app:layout_constraintTop_toBottomOf="@+id/linear_name"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:text="@string/string_age"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_age"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
             android:hint="@string/string_age"
-            android:importantForAutofill="no"
             android:inputType="number"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/text_size"
-            android:theme="@style/Theme.AppCompat" />
-    </LinearLayout>
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_weight"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linear_size"
-        app:layout_constraintTop_toBottomOf="@+id/linear_age"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:text="@string/string_weight"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_weight"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
             android:hint="@string/string_weight"
-            android:importantForAutofill="no"
             android:inputType="number"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/text_size"
-            android:theme="@style/Theme.AppCompat" />
-    </LinearLayout>
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_size"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linear_imc"
-        app:layout_constraintTop_toBottomOf="@+id/linear_weight"
-        tools:layout_editor_absoluteX="8dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:text="@string/string_size"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_size"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
-            android:gravity="center"
             android:hint="@string/string_size"
-            android:importantForAutofill="no"
             android:inputType="number"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            android:textSize="@dimen/text_size"
-            android:theme="@style/Theme.AppCompat" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear_imc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_save"
-        app:layout_constraintTop_toBottomOf="@+id/linear_size"
-        tools:layout_editor_absoluteX="8dp">
-
-        <TextView
-            android:id="@+id/btn_imc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00f"
-            android:gravity="center"
-            android:padding="@dimen/tv_padding"
-            android:text="@string/string_imc"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size" />
-
-        <TextView
-            android:id="@+id/tv_imc"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="50"
-            android:gravity="center"
-            android:padding="@dimen/tv_padding"
-            android:text="@string/imc"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size" />
-
-        <TextView
-            android:id="@+id/tv_imc_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="@dimen/tv_padding"
-            android:text="@string/imc_result"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size" />
-    </LinearLayout>
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/btn_save"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="#00f"
+        android:id="@+id/btn_imc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="@string/save"
+        android:padding="@dimen/tv_padding"
+        android:text="@string/string_imc"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="@dimen/text_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
     <ImageView
         android:id="@+id/imageview_back_button"
@@ -217,5 +126,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_button" />
+
+    <ImageView
+        android:id="@+id/imageView_imc_table"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_imc"
+        app:srcCompat="@drawable/tabla_imc"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

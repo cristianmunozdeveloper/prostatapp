@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="save">Guardar</string>
+    <string name="entendido">Entendido</string>
+    <string name="error_message">Ups, algo salio mal.</string>
+</resources>

@@ -6,6 +6,7 @@ import com.cristiansofthouse.information.InformationActivity
 import com.cristiansofthouse.profile.ProfileActivity
 import com.cristiansofthouse.prostatest.ProstaTestActivity
 import com.cristiansofthouse.tabutest.TabuTestActivity
+import com.cristiansofthouse.testhistory.ui.TestHistoryActivity
 import javax.inject.Inject
 
 internal class NavigationImpl @Inject constructor() : Navigation {
@@ -24,5 +25,9 @@ internal class NavigationImpl @Inject constructor() : Navigation {
 
     override fun goToInformation(context: Context): Intent {
         return Intent(context, InformationActivity::class.java)
+    }
+
+    override fun goToTestHistory(context: Context): Intent {
+        return Intent(context, TestHistoryActivity::class.java)
     }
 }

@@ -31,14 +31,11 @@
         tools:itemCount="10"
         tools:listitem="@layout/view_question_item" />
 
-    <TextView
+    <include
         android:id="@+id/btn_save"
+        layout="@layout/view_save_button"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="#00f"
-        android:gravity="center"
-        android:text="GUARDAR"
-        android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

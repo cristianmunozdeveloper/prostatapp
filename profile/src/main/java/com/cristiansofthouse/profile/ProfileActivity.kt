@@ -1,10 +1,10 @@
 package com.cristiansofthouse.profile
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.cristiansofthouse.common.ResultDialog
 import com.cristiansofthouse.profile.databinding.ActivityProfileBinding
 import com.cristiansofthouse.profile.model.ProfileActions
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,8 +21,6 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        setTextviewVisibility(View.INVISIBLE)
-        binding.btnSave.setOnClickListener { save() }
         binding.imageviewBackButton.setOnClickListener { onBackPressed() }
         binding.btnImc.setOnClickListener {
             viewModel.operationImc(
@@ -47,13 +45,8 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun resultImc(result: String) {
-        setTextviewVisibility(View.VISIBLE)
-        binding.tvImcResult.text = result
-    }
-
-    private fun setTextviewVisibility(visibility: Int) {
-        binding.tvImc.visibility = visibility
-        binding.tvImcResult.visibility = visibility
+        ResultDialog.newInstance(String.format(getString(R.string.imc), result))
+            .show(supportFragmentManager, this.javaClass.name)
     }
 
     private fun save() {

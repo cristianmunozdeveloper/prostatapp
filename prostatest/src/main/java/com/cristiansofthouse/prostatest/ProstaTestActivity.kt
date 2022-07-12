@@ -2,13 +2,21 @@ package com.cristiansofthouse.prostatest
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cristiansofthouse.common.QuestionItem
+import com.cristiansofthouse.common.ResultDialog
+import com.cristiansofthouse.common.ResultDialogListener
+import com.cristiansofthouse.prostatest.ProstaTestViewModel.Event
 import com.cristiansofthouse.prostatest.databinding.ActivityProstaTestBinding
 import com.xwray.groupie.GroupieAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
-class ProstaTestActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class ProstaTestActivity : AppCompatActivity(), ResultDialogListener {
+
+    private val viewModel: ProstaTestViewModel by viewModels()
 
     private val binding: ActivityProstaTestBinding by lazy {
         ActivityProstaTestBinding.inflate(layoutInflater)
@@ -18,13 +26,24 @@ class ProstaTestActivity : AppCompatActivity() {
 
     private val answersMap = mutableMapOf<Int, Boolean>()
 
+    private var score: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupRecycler()
         setupQuestions()
-        binding.btnSave.setOnClickListener { save() }
+        binding.btnSave.btnSave.setOnClickListener { save() }
         binding.imageviewBackButton.setOnClickListener { onBackPressed() }
+        viewModel.event.observe(this, ::handleEvents)
+    }
+
+    private fun handleEvents(event: Event) {
+        if (event is Event.Success) {
+            finish()
+        } else {
+            Toast.makeText(this, getString(com.cristiansofthouse.common.R.string.error_message), Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setupRecycler() {
@@ -48,12 +67,17 @@ class ProstaTestActivity : AppCompatActivity() {
     }
 
     private fun save() {
-        val scoreTest = answersMap.values.filter { it }.size
-        val message = when (scoreTest) {
-            in 0..5 -> "Riesgo Bajo"
-            in 6..10 -> "Riesgo Medio"
-            else -> "Riesgo Alto"
+        score = answersMap.values.filter { it }.size
+        val message = when (score) {
+            in 0..5 -> getString(R.string.low_risk)
+            in 6..10 -> getString(R.string.middle_risk)
+            else -> getString(R.string.high_risk)
         }
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        ResultDialog.newInstance(String.format(getString(R.string.risk_message), message))
+            .show(supportFragmentManager, this.javaClass.name)
+    }
+
+    override fun callback() {
+        viewModel.saveTestHistory(score.toString())
     }
 }
