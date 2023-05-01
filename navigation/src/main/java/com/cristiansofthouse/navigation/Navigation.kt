@@ -5,9 +5,5 @@ import android.content.Intent
 
 interface Navigation {
 
-    fun goToProstatest(context: Context): Intent
-    fun goToTabuTest(context: Context): Intent
-    fun goToProfile(context: Context): Intent
-    fun goToInformation(context: Context): Intent
-    fun goToTestHistory(context: Context): Intent
+    fun goTo(context: Context, goTo: Destination): Intent
 }

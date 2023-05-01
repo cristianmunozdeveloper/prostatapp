@@ -1,10 +1,13 @@
 package com.cristiansofthouse.common
 
 import android.content.Context
+import android.icu.lang.UProperty.AGE
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.isVisible
 import androidx.fragment.app.DialogFragment
 import com.cristiansofthouse.common.databinding.FragmentResultDialogBinding
 
@@ -12,10 +15,14 @@ class ResultDialog : DialogFragment() {
 
     companion object {
         const val DIALOG_MESSAGE = "dialog_message"
-        fun newInstance(message: String): ResultDialog =
+        const val AGE = "age"
+        fun newInstance(text: String, age: Int? = null): ResultDialog =
             ResultDialog().apply {
                 arguments = Bundle().apply {
-                    putString(DIALOG_MESSAGE, message)
+                    putString(DIALOG_MESSAGE, text)
+                    age?.let {
+                        putInt(AGE, age)
+                    }
                 }
             }
     }
@@ -44,7 +51,24 @@ class ResultDialog : DialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.textViewMessage.text = arguments?.getString(DIALOG_MESSAGE)
+        val age = arguments?.getInt(AGE)
+        val messageExtra = arguments?.getString(DIALOG_MESSAGE)
+        var imcResult: String? = null
+        age?.takeIf { it != 0 }?.let {
+            imcResult = String.format(getString(R.string.imc), messageExtra)
+            val imcTable =
+                if (age >= 60) R.drawable.table_imc_adulto_mayor else R.drawable.tabla_imc
+            binding.imcTable.setImageDrawable(
+                ResourcesCompat.getDrawable(
+                    resources,
+                    imcTable,
+                    null
+                )
+            )
+        } ?: kotlin.run { binding.imcTable.isVisible = false }
+
+        binding.textViewMessage.text = imcResult ?: messageExtra
+
         binding.btnOk.setOnClickListener {
             dismiss()
             listener?.callback()

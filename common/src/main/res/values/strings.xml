@@ -3,4 +3,6 @@
     <string name="save">Guardar</string>
     <string name="entendido">Entendido</string>
     <string name="error_message">Ups, algo salio mal.</string>
+    <string name="imc">Su indice de masa corporal es: %s</string>
+    <string name="intrucciones_prostatest">A continuación encontrará un test; lea la pregunta y si la respuesta es SI, mueva el botón correspondiente hacia el lado derecho (este cambiará de color). Si la respuesta es NO, deje el botón correspondiente del lado izquierdo.</string>
 </resources>

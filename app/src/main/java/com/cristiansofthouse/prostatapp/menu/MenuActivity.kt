@@ -1,11 +1,12 @@
 package com.cristiansofthouse.prostatapp.menu
 
-import android.content.Intent
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.style.UnderlineSpan
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.cristiansofthouse.common.ResultDialog
-import com.cristiansofthouse.information.SELECTED_INDEX
+import com.cristiansofthouse.navigation.Destination
 import com.cristiansofthouse.navigation.Navigation
 import com.cristiansofthouse.prostatapp.R
 import com.cristiansofthouse.prostatapp.databinding.ActivityMenuBinding
@@ -32,35 +33,34 @@ class MenuActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupRecycler()
         addMenuItems()
-        profileListener()
+        imcListener()
+        binding.imageviewAboutUs.setOnClickListener { aboutUs() }
     }
 
-    private fun profileListener() {
-        binding.imageviewProfile.setOnClickListener { startActivity(navigation.goToProfile(this)) }
+    private fun imcListener() {
+        val text = getString(R.string.calcula_tu_indice_de_masa_corporal_imc)
+        binding.textviewImc.text =
+            SpannableString(text).apply { setSpan(UnderlineSpan(), 0, text.length, 0) }
+        binding.textviewImc.setOnClickListener { goToImc() }
+        binding.imageviewImc.setOnClickListener { goToImc() }
     }
 
-    private fun navigate(index: Int) {
-        val intent = when (index) {
-            0 -> navigation.goToProstatest(this)
-            1 -> navigation.goToTabuTest(this)
-            2, 3 -> goToInformation(index)
-            4 -> navigation.goToTestHistory(this)
-            else -> aboutUs()
-        }
-        if (intent is Intent) {
-            startActivity(intent)
-        }
+    private fun goToImc() {
+        startActivity(
+            navigation.goTo(
+                this,
+                Destination.Imc
+            )
+        )
+    }
+
+    private fun navigate(destination: Destination) {
+        startActivity(navigation.goTo(this, destination))
     }
 
     private fun aboutUs() {
         ResultDialog.newInstance(getString(R.string.about_us))
             .show(supportFragmentManager, this.javaClass.name)
-    }
-
-    private fun goToInformation(index: Int): Intent {
-        return navigation.goToInformation(this).apply {
-            putExtra(SELECTED_INDEX, index)
-        }
     }
 
     private fun addMenuItems() {

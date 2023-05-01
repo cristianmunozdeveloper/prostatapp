@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MeetMe</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="text_conoceme">Soy un órgano que está únicamente en los hombres, me encuentro ubicada en tu pelvis, debajo de la vejiga y rodeando la uretra. Tengo forma de pirámide invertida y soy del tamaño de una nuez.\nConoceme en la siguiente foto:</string>
+    <string name="text_funciones_prostata">Tengo muchas funciones, entre ellas se encuentran:\n\n 1. Ayudar al control urinario mediante la presión que hago sobre la uretra, es decir, el conducto por donde pasa la orina.\n2. Otra función, es producir el líquido prostático que forma parte del semen.\n3. También ayudar en la producción de hormonas como la testosterona.\n\nAlgunos hombres, si no se cuidan, con el pasar de los años, pueden  desarrollar enfermedades, una de ellas es el cáncer de próstata.</string>
+    <string name="text_cancer_prostata">Cáncer de próstata:\n\nEs una enfermedad donde las células de la próstata comienzan a crecer de forma anormal y a multiplicarse sin control. Esta enfermedad es el tipo de cáncer más frecuente en los hombres de América Latina.</string>
+</resources>

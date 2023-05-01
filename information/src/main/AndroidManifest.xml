@@ -5,6 +5,7 @@
     <application>
         <activity
             android:name=".InformationActivity"
+            android:theme="@style/Theme.Prostatapp"
             android:exported="false" />
     </application>
 

@@ -1,23 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Prostatapp</string>
+    <string name="app_name">ProstApp</string>
     <string-array name="menu_items">
-        <item>Prostatest</item>
-        <item>Tabutest</item>
-        <item>Educación</item>
-        <item>Asesoría</item>
-        <item>Historial de test</item>
-        <item>Conocenos</item>
+        <item>1. ¡Conóceme!</item>
+        <item>4. ¿Cómo me puedes cuidar?</item>
+        <item>2. ¿Por qué me enfermo?</item>
+        <item>5. Mitos sobre mi</item>
+        <item>3. ¿Que hacer si me enfermo?</item>
+        <item>6. Consulta con tu EPS</item>
     </string-array>
     <string name="about_us" tools:ignore="ExtraTranslation">
         Estudiantes del programa de Enfermería de la universidad del cauca.\n\n
 - Laura Natalia Lara\n
 - Dahiana Carolina Hernández\n
-- Anderson Alexis Joaquí\n
-- Jorge Andrés Moncayo\n\n
-Asesora.\n
-- Yusley Katerine Pabon\n\n
+- Natalia Camacho Fernandez\n
+- Jorge Andrés Moncayo\n\n\n
+Asesora.\n\n
+- Enf. Martha Isabel Vivas Chacon\n\n\n
 Desarrolladores.\n\n
-- Cristian David Muñoz\n(Ingeniero en electrónica Unicauca)\n
-- Juan Sebastian Benavides\n(Ingeniero en electrónica Unicauca)
+- Ing. Cristian David Muñoz\n
     </string>
+    <string name="hola_nsoy_tu_prostata">Hola, soy tu\npróstata</string>
+    <string name="calcula_tu_indice_de_masa_corporal_imc">Calcula tu indice \nde masa corporal (IMC)</string>
 </resources>

@@ -4,7 +4,16 @@
 
     <application>
         <activity
+            android:name=".MythActivity"
+            android:theme="@style/Theme.Prostatapp"
+            android:exported="false" />
+        <activity
+            android:name=".MythsAboutMeActivity"
+            android:theme="@style/Theme.Prostatapp"
+            android:exported="false" />
+        <activity
             android:name=".TabuTestActivity"
+            android:theme="@style/Theme.Prostatapp"
             android:exported="false" />
     </application>
 

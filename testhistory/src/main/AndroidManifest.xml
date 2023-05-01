@@ -5,6 +5,7 @@
     <application>
         <activity
             android:name=".ui.TestHistoryActivity"
+            android:theme="@style/Theme.Prostatapp"
             android:exported="false" />
     </application>
 

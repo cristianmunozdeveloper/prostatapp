@@ -1,36 +1,26 @@
 <resources>
- <string name="advisory">
- Derechos de la persona con cáncer de próstata\n\n
- • Tener accesibilidad, disponibilidad, oportunidad y continuidad para el diagnóstico y la atención de la enfermedad.\n
- • Recibir un trato digno sin discriminación alguna.\n
- • Recibir los servicios de salud en condiciones de higiene, seguridad y respeto a su intimidad.\n
- • Obtener información clara y oportuna de su estado de salud, de los servicios que vaya a recibir y de los riesgos del tratamiento.\n
- • Recibir una segunda opinión médica si lo desea.\n
- • Que se mantenga estricta confidencialidad sobre su información clínica\n
- • A que las entidades de aseguramiento entreguen los medicamentos ordenados por el médico tratante de manera completa e inmediata\n
- • Fortalecimiento de los servicios de apoyo social en los componentes psicológico, familiar, laboral y social.\n\n
- Exámenes\n\n
- • Prueba de antígeno prostático (PSA): Prueba a de sangre que mide los niveles del antígeno o PSA en la sangre, ya que este es producido por la próstata y su elevación podría significar la presencia del cáncer de próstata\n
- • Tacto Rectal: El proveedor de atención médica realiza el tacto rectal al insertar un dedo enguantado y lubricado en el recto del hombre para sentir si hay algo anormal en la próstata, como cáncer. Es importante conocer que este procedimiento dura apenas un par de minutos y es completamente confidencial y tratado con mucha profesionalidad por los prestadores de salud, así que no debe ser motivo de vergüenza ni miedo, en caso de requerirlo la mejor opción es consultar ya que siempre debe primar nuestra seguridad y bienestar\n
- • Biopsia de la próstata: Consiste en tomar una pequeña muestra de tejido prostático para examinarla y determinar la presencia o no de cáncer, este procedimiento se realiza bajo los efectos de anestesia así que apenas sentirá molestias, la duración del procedimiento es de 15 minutos aproximadamente\n\n
- Como consultar\n\n
- En caso de necesidad de consulta, debe solicitar una cita con médico general por medio de su EPS, la cual determinara la necesidad de una prueba de PSA y tacto rectal para según su resultado seguir con la guía reglamentaria para detección temprana y tratamiento de cáncer de próstata
- </string>
-    <string name="education">
- Definición: La próstata es una glándula del tamaño de una nuez, produce el líquido que forma parte del semen cuya función es nutrir y transportar el esperma.\n\n
- Ubicación: Se sitúa justo debajo de la vejiga y delante del recto envolviendo a la uretra (conducto por donde se expulsa la orina y el semen).\n\n
- Cáncer de Próstata: El cáncer de próstata es uno de los tipos más comunes de cáncer. Muchos cánceres de próstata crecen lentamente y permanecen limitados a la glándula prostática, en donde pueden no causar daño grave. Pero, si bien algunos tipos de cáncer de próstata crecen lentamente y pueden necesitar un tratamiento mínimo, otros tipos son agresivos y se pueden diseminar con rapidez.\n\n
- Detección del cáncer de próstata:\n\n
- El cáncer de próstata que se detecta de forma temprana, tiene mayor probabilidad de tener un tratamiento exitoso, por lo tanto es importante hacer las pruebas de tamizaje para la detección temprana, entre ellas tenemos:\n\n
- • Biopsia de Próstata.\n
- • Tacto rectal.\n
- • Prueba de antígeno prostático específico (PSA) en sangre.\n
- • Ecografía Transversal.\n\n
-Recomendaciones para prevenirlo:\n\n
- • Visitar al médico anualmente a controles y a partir de los 50 años realizarse el examen de tamizaje como lo es el Tacto Rectal.\n
- • Evitar el consumo de tabaco y alcohol.\n
- • Incrementar el consumo de frutas, verduras y cereales y disminuir el consumo de grasas.\n
- • Practicar actividad física con regularidad.\n
-
- </string>
+ <string-array name="lista_de_eps">
+  <item>Sanidad</item>
+  <item>Nueva IPS</item>
+  <item>E.S.E Popayán</item>
+  <item>Emsanar</item>
+  <item>Salud Total</item>
+  <item>Colsalud</item>
+  <item>Sanitas</item>
+  <item>Horisoes</item>
+  <item>Asmet Salud</item>
+  <item>Centro de Salud Alfonso Lopez</item>
+ </string-array>
+ <string-array name="lista_de_telefonos">
+  <item>3117884440</item>
+  <item>6028334991</item>
+  <item>6028333000</item>
+  <item>6028237200</item>
+  <item>3137863594</item>
+  <item>3163918723</item>
+  <item>3202550525</item>
+  <item>3336025170</item>
+  <item>6028312000</item>
+  <item>6028224468</item>
+ </string-array>
 </resources>

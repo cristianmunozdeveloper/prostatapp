@@ -8,4 +8,22 @@
     </string-array>
     <string name="tabu_message">Usted está desinformado sobre el tema de la revisión prostática, se sugiere acceder al servicio de salud para obtener información adecuada.</string>
     <string name="no_tabu_message">Felicidades, cuenta con información adecuada sobre el tema de revisión prostática, recuerde visitar a su médico para llevar un control.</string>
+
+    <string-array name="option_content">
+        <item>Examen alterado</item>
+        <item>Cura milagrosa</item>
+        <item>Impotencia e incontinencia</item>
+        <item>Tacto rectal</item>
+    </string-array>
+    <string name="examen_alterado">Examen alterado</string>
+    <string name="cura_milagrosa">Cura milagrosa</string>
+    <string name="impotencia_e_incontinencia">Impotencia e incontinencia</string>
+    <string name="tacto_rectal">Tacto rectal</string>
+
+    <string-array name="myth_content">
+        <item>Una de las preguntas que puede surgir al revisar el módulo anterior es: ¿Si mi Prueba de antígeno prostático sale aumentado significa que tengo cáncer? Bien; Pues la respuesta es no; ya que la esta prueba puede salir alterada por otras complicaciones relacionadas con la próstata.</item>
+        <item>Es posible que en medios de comunicación o publicado en internet escuches sobre alguna cura milagrosa o procedimiento divino que trata cualquier problema que tenga que ver con la próstata; pero esto no es así; el tratamiento para el cáncer u otros problemas relacionados con este órgano, depende de cada paciente, ya que se deben evaluar muchos factores; con los cuales se podrá determinar el mejor tratamiento.</item>
+        <item>Otro mito que es muy común escuchar; es que si te operan de la próstata tendrás impotencia sexual, pero esto solo ocurre en algunos casos cuando la próstata se extrae por completo, lo cual ocurre cuando se llega a una etapa avanzada de cáncer; ligado a este mito también se encuentra el temor a padecer de incontinencia urinaria, pero esta se da en muy pocos casos y por lo general desaparece con el tiempo.</item>
+        <item>Tal vez uno de los mitos o tabú más grande surgido alrededor de los exámenes prostáticos, son los que se han creado alrededor del tacto rectal, pero como está descrito en el módulo anterior de esta App, es un examen realizado por expertos en salud, con ética profesional y guardando una adecuada confidencialidad con cada persona por lo cual puedes estar tranquilo cuando te presentes a este examen.</item>
+    </string-array>
 </resources>

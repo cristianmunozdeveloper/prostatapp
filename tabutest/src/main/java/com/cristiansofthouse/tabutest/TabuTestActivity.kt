@@ -3,8 +3,8 @@ package com.cristiansofthouse.tabutest
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.cristiansofthouse.common.BaseActivity
 import com.cristiansofthouse.common.QuestionItem
 import com.cristiansofthouse.common.ResultDialog
 import com.cristiansofthouse.common.ResultDialogListener
@@ -14,7 +14,7 @@ import com.xwray.groupie.GroupieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class TabuTestActivity : AppCompatActivity(), ResultDialogListener {
+class TabuTestActivity : BaseActivity(), ResultDialogListener {
 
     private val viewModel: TabuTestViewModel by viewModels()
 
@@ -27,13 +27,17 @@ class TabuTestActivity : AppCompatActivity(), ResultDialogListener {
     private val answersMap = mutableMapOf<Int, Boolean>()
 
     private var score: Int = 0
+    override var klass: Class<*> = this::class.java
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupRecycler()
         setupQuestions()
-        binding.btnSave.btnSave.setOnClickListener { save() }
+        binding.btnSave.setOnClickListener { save() }
+        binding.playButton.setOnPlayButtonClickListener {
+            playAudio(it, com.cristiansofthouse.common.R.raw.instrucciones_test)
+        }
         binding.imageviewBackButton.setOnClickListener { onBackPressed() }
         viewModel.event.observe(this, ::handleEvents)
     }
@@ -42,7 +46,11 @@ class TabuTestActivity : AppCompatActivity(), ResultDialogListener {
         if (event is Event.Success) {
             finish()
         } else {
-            Toast.makeText(this, getString(com.cristiansofthouse.common.R.string.error_message), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this,
+                getString(com.cristiansofthouse.common.R.string.error_message),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 
